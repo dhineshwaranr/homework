@@ -1,7 +1,3 @@
-/**
- * Created by stephan on 20.03.16.
- */
-
 $(function () {
     // VARIABLES =============================================================
     var TOKEN_KEY = "jwtToken"
@@ -131,7 +127,7 @@ $(function () {
 
     $("#userServiceBtn").click(function () {
         $.ajax({
-            url: "/protected/useronly",
+            url: "/owner/owner-only",
             type: "GET",
             contentType: "application/json; charset=utf-8",
             dataType: "json",
@@ -149,7 +145,7 @@ $(function () {
 
     $("#adminServiceBtn").click(function () {
         $.ajax({
-            url: "/protected/adminonly",
+            url: "/admin/admin-only",
             type: "GET",
             contentType: "application/json; charset=utf-8",
             headers: createAuthorizationTokenHeader(),
@@ -164,7 +160,7 @@ $(function () {
     
     $("#superServiceBtn").click(function () {
         $.ajax({
-            url: "/protected/superadminonly",
+            url: "/labour/labour-only",
             type: "GET",
             contentType: "application/json; charset=utf-8",
             headers: createAuthorizationTokenHeader(),
